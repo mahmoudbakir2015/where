@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "171682034097",
+    "project_id": "axial-sunup-337816",
+    "storage_bucket": "axial-sunup-337816.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171682034097:android:bd130ddc065369e82c4d90",
+        "android_client_info": {
+          "package_name": "com.example.where"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzsmXYWTZ3Xod4vGoTFE8hyANmLe415Ws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
