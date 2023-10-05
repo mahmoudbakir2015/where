@@ -16,20 +16,23 @@ class LoginScreen extends StatelessWidget {
           key: phoneAuthCubit.phoneFormKey,
           child: Container(
             margin: const EdgeInsets.symmetric(horizontal: 32, vertical: 88),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                buildIntroTexts(),
-                const SizedBox(
-                  height: 110,
-                ),
-                buildPhoneFormField(context: context),
-                const SizedBox(
-                  height: 70,
-                ),
-                buildNextButton(context),
-                buildPhoneNumberSubmitedBloc(context: context),
-              ],
+            child: SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  buildIntroTexts(),
+                  const SizedBox(
+                    height: 110,
+                  ),
+                  buildPhoneFormField(context: context),
+                  const SizedBox(
+                    height: 70,
+                  ),
+                  buildNextButton(context),
+                  buildPhoneNumberSubmitedBloc(context: context),
+                ],
+              ),
             ),
           ),
         ),

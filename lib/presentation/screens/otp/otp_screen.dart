@@ -18,19 +18,22 @@ class OtpScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         body: Container(
           margin: const EdgeInsets.symmetric(horizontal: 32, vertical: 88),
-          child: Column(
-            children: [
-              buildIntroTexts(phoneNumber: phoneNumber),
-              const SizedBox(
-                height: 88,
-              ),
-              buildPinCodeFields(context),
-              const SizedBox(
-                height: 60,
-              ),
-              buildVerifyButton(context),
-              buildPhoneVerificationBloc(),
-            ],
+          child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            child: Column(
+              children: [
+                buildIntroTexts(phoneNumber: phoneNumber),
+                const SizedBox(
+                  height: 88,
+                ),
+                buildPinCodeFields(context),
+                const SizedBox(
+                  height: 60,
+                ),
+                buildVerifyButton(context),
+                buildPhoneVerificationBloc(),
+              ],
+            ),
           ),
         ),
       ),
