@@ -6,10 +6,10 @@ import 'app_router.dart';
 import 'constnats/strings.dart';
 
 late String initialRoute;
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+
 
   FirebaseAuth.instance.authStateChanges().listen((user) {
     if (user == null) {
