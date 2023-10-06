@@ -26,3 +26,5 @@ class DirectionsLoaded extends MapsState {
   DirectionsLoaded(this.placeDirections);
 
 }
+class AddMarker extends MapsState{}
+class RemoveMarker extends MapsState{}
