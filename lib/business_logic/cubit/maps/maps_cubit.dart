@@ -5,7 +5,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:material_floating_search_bar_2/material_floating_search_bar_2.dart';
 import 'package:uuid/uuid.dart';
-import '../../../data/models/Place_suggestion.dart';
+import '../../../data/models/place_suggestion.dart';
 import '../../../data/models/place.dart';
 import '../../../data/models/place_directions.dart';
 import '../../../data/repository/maps_repo.dart';

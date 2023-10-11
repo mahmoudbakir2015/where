@@ -1,7 +1,7 @@
 
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-import '../models/Place_suggestion.dart';
+import '../models/place_suggestion.dart';
 import '../models/place.dart';
 import '../models/place_directions.dart';
 import '../webservices/places_webservices.dart';

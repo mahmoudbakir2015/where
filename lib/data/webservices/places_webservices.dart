@@ -68,7 +68,7 @@ class PlacesWebservices {
           'key': googleAPIKey,
         },
       );
-        print("Omar I'm testing directions");
+      print("Omar I'm testing directions");
       print(response.data);
       return response.data;
     } catch (error) {
