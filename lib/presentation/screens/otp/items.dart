@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import '../../../business_logic/cubit/phone_auth/phone_auth_cubit.dart';
-import '../../../constnats/my_colors.dart';
-import '../../../constnats/strings.dart';
+import '../../../constants/my_colors.dart';
+import '../../../constants/strings.dart';
 
 Widget buildIntroTexts({required phoneNumber}) {
   return Column(

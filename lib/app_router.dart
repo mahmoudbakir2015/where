@@ -4,7 +4,7 @@ import 'package:where/presentation/screens/map/map_screen.dart';
 import 'package:where/presentation/screens/otp/otp_screen.dart';
 import 'business_logic/cubit/maps/maps_cubit.dart';
 import 'business_logic/cubit/phone_auth/phone_auth_cubit.dart';
-import 'constnats/strings.dart';
+import 'constants/strings.dart';
 import 'data/repository/maps_repo.dart';
 import 'data/webservices/places_webservices.dart';
 import 'presentation/screens/login/login_screen.dart';

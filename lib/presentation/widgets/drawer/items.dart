@@ -4,8 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../business_logic/cubit/phone_auth/phone_auth_cubit.dart';
-import '../../../constnats/my_colors.dart';
-import '../../../constnats/strings.dart';
+import '../../../constants/my_colors.dart';
+import '../../../constants/strings.dart';
 
 PhoneAuthCubit phoneAuthCubit = PhoneAuthCubit();
 
@@ -70,6 +70,7 @@ Widget buildDrawerListItemsDivider() {
 }
 
 void _launchURL(String url) async {
+  // ignore: deprecated_member_use
   await canLaunch(url) ? await launch(url) : throw 'Could not launch $url';
 }
 

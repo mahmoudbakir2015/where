@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../constnats/my_colors.dart';
+import '../../constants/my_colors.dart';
 import '../../data/models/place_suggestion.dart';
 
 class PlaceItem extends StatelessWidget {

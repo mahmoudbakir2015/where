@@ -5,7 +5,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:material_floating_search_bar_2/material_floating_search_bar_2.dart';
 import 'package:where/presentation/screens/map/items.dart';
 import '../../../business_logic/cubit/maps/maps_cubit.dart';
-import '../../../constnats/my_colors.dart';
+import '../../../constants/my_colors.dart';
 import '../../../helpers/location_helper.dart';
 import '../../widgets/distance_and_time.dart';
 import '../../widgets/drawer/my_drawer.dart';
@@ -14,6 +14,7 @@ class MapScreen extends StatefulWidget {
   const MapScreen({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _MapScreenState createState() => _MapScreenState();
 }
 
@@ -134,6 +135,7 @@ class _MapScreenState extends State<MapScreen> {
     final GoogleMapController controller = await mapsCubit.mapController.future;
     controller.animateCamera(
         CameraUpdate.newCameraPosition(mapsCubit.goToSearchedForPlace));
+    // ignore: use_build_context_synchronously
     buildSearchedPlaceMarker(context: context);
   }
 

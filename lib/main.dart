@@ -3,7 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'app_router.dart';
-import 'constnats/strings.dart';
+import 'constants/strings.dart';
 
 late String initialRoute;
 void main() async {
