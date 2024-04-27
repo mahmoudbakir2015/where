@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -29,11 +31,11 @@ class PlacesWebservices {
           'sessiontoken': sessionToken
         },
       );
-      print(response.data['predictions']);
-      print(response.statusCode);
+      log(response.data['predictions']);
+      log(response.statusCode.toString());
       return response.data['predictions'];
     } catch (error) {
-      print(error.toString());
+      log(error.toString());
       return [];
     }
   }
@@ -68,8 +70,8 @@ class PlacesWebservices {
           'key': googleAPIKey,
         },
       );
-      print("Omar I'm testing directions");
-      print(response.data);
+      log("Omar I'm testing directions");
+      log(response.data);
       return response.data;
     } catch (error) {
       return Future.error("Place location error : ",

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,9 +15,9 @@ class PhoneAuthCubit extends Cubit<PhoneAuthState> {
   static PhoneAuthCubit get(context) => BlocProvider.of(context);
 
   void login(BuildContext context) {
-
     BlocProvider.of<PhoneAuthCubit>(context).submitOTP(otpCode);
   }
+
   String generateCountryFlag() {
     String countryCode = 'eg';
 
@@ -50,23 +52,23 @@ class PhoneAuthCubit extends Cubit<PhoneAuthState> {
   }
 
   void verificationCompleted(PhoneAuthCredential credential) async {
-    print('verificationCompleted');
+    log('verificationCompleted');
     await signIn(credential);
   }
 
   void verificationFailed(FirebaseAuthException error) {
-    print('verificationFailed : ${error.toString()}');
+    log('verificationFailed : ${error.toString()}');
     emit(ErrorOccurred(errorMsg: error.toString()));
   }
 
   void codeSent(String verificationId, int? resendToken) {
-    print('codeSent');
+    log('codeSent');
     this.verificationId = verificationId;
     emit(PhoneNumberSubmited());
   }
 
   void codeAutoRetrievalTimeout(String verificationId) {
-    print('codeAutoRetrievalTimeout');
+    log('codeAutoRetrievalTimeout');
   }
 
   Future<void> submitOTP(String otpCode) async {
