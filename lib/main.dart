@@ -11,7 +11,7 @@ void main() async {
   await Firebase.initializeApp();
 
   FirebaseAuth.instance.authStateChanges().listen((user) {
-    if (user == null) {
+    if (user != null) {
       initialRoute = loginScreen;
     } else {
       initialRoute = mapScreen;
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Where Are You?',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,

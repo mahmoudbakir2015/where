@@ -73,7 +73,9 @@ class PhoneAuthCubit extends Cubit<PhoneAuthState> {
 
   Future<void> submitOTP(String otpCode) async {
     PhoneAuthCredential credential = PhoneAuthProvider.credential(
-        verificationId: verificationId, smsCode: otpCode);
+      verificationId: verificationId,
+      smsCode: otpCode,
+    );
 
     await signIn(credential);
   }
@@ -83,7 +85,11 @@ class PhoneAuthCubit extends Cubit<PhoneAuthState> {
       await FirebaseAuth.instance.signInWithCredential(credential);
       emit(PhoneOTPVerified());
     } catch (error) {
-      emit(ErrorOccurred(errorMsg: error.toString()));
+      emit(
+        ErrorOccurred(
+          errorMsg: error.toString(),
+        ),
+      );
     }
   }
 

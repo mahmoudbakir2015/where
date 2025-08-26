@@ -101,8 +101,10 @@ Widget buildPhoneNumberSubmitedBloc({required BuildContext context}) {
 
       if (state is PhoneNumberSubmited) {
         Navigator.pop(context);
-        Navigator.of(context)
-            .pushNamed(otpScreen, arguments: phoneAuthCubit.phoneNumber);
+        Navigator.of(context).pushNamed(
+          otpScreen,
+          arguments: phoneAuthCubit.phoneNumber,
+        );
       }
 
       if (state is ErrorOccurred) {
@@ -140,7 +142,10 @@ Widget buildNextButton(BuildContext context) {
       ),
       child: const Text(
         'Next',
-        style: TextStyle(color: Colors.white, fontSize: 16),
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 16,
+        ),
       ),
     ),
   );

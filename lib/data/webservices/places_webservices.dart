@@ -32,10 +32,12 @@ class PlacesWebservices {
         },
       );
       log(response.data['predictions']);
+
       log(response.statusCode.toString());
       return response.data['predictions'];
     } catch (error) {
       log(error.toString());
+      log('pppppppppppppp');
       return [];
     }
   }
@@ -70,7 +72,7 @@ class PlacesWebservices {
           'key': googleAPIKey,
         },
       );
-      log("Omar I'm testing directions");
+      log("MahmoudBakir I'm testing directions");
       log(response.data);
       return response.data;
     } catch (error) {
