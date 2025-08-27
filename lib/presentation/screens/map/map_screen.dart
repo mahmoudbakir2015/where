@@ -143,7 +143,7 @@ class _MapScreenState extends State<MapScreen> {
   Widget build(BuildContext context) {
     MapsCubit mapsCubit = MapsCubit.get(context);
     return Scaffold(
-      drawer: const MyDrawer(),
+      // drawer: const MyDrawer(),
       body: Stack(
         fit: StackFit.expand,
         children: [

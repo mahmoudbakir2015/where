@@ -25,19 +25,33 @@ class PlacesWebservices {
         suggestionsBaseUrl,
         queryParameters: {
           'input': place,
+          // جرب تشيل أو تغير types لو بيرجع []
           'types': 'address',
           'components': 'country:eg',
           'key': googleAPIKey,
-          'sessiontoken': sessionToken
+          'sessiontoken': sessionToken,
         },
       );
-      log(response.data['predictions']);
 
-      log(response.statusCode.toString());
-      return response.data['predictions'];
+      log("MahmoudBakir I'm testing suggestions");
+      log("🔎 Full Response: ${response.data.toString()}");
+
+      if (response.data is Map) {
+        final status = response.data['status'];
+        final errorMessage = response.data['error_message'];
+        final predictions = response.data['predictions'];
+
+        log("📌 Status: $status");
+        log("⚠️ Error message: $errorMessage");
+        log("📍 Predictions: ${predictions.toString()}");
+
+        return predictions ?? [];
+      } else {
+        log("❌ Unexpected response format: ${response.data.runtimeType}");
+        return [];
+      }
     } catch (error) {
-      log(error.toString());
-      log('pppppppppppppp');
+      log("🔥 Exception: $error");
       return [];
     }
   }
